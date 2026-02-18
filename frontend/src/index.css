@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-dark-card border border-dark-border rounded-lg backdrop-blur-sm;
+  }
+  
+  .status-badge {
+    @apply px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .status-idle {
+    @apply bg-gray-600 text-gray-200;
+  }
+  
+  .status-working {
+    @apply bg-accent-blue text-blue-100;
+  }
+  
+  .status-bidding {
+    @apply bg-accent-orange text-orange-100;
+  }
+  
+  .job-open {
+    @apply text-accent-green;
+  }
+  
+  .job-progress {
+    @apply text-accent-orange;
+  }
+  
+  .job-completed {
+    @apply text-accent-blue;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #4a4a4a transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    border-radius: 3px;
+  }
+}
